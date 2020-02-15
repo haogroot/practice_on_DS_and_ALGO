@@ -1,6 +1,6 @@
 # Data Structures
 * Dynamic Array
-* Linked List
+* [Linked List](https://www.notion.so/Linked-list-39466fce6cc04908938246ffa33d0ccc)
 * Stack & Queue
 * Hash Tables
 * Binary Search Tree
@@ -42,7 +42,7 @@ Once you are comfortable with the data structures & algorithms above, do the fol
 * Write the merge sort algorithm
 * Write the quicksort algorithm
 * Print binary tree using DFS (in-order, preorder and post order — all three of them) and BFS.
-* Memorize time & space complexities for common algorithms. Here’s an interesting website.
+* Memorize time & space complexities for common algorithms. Here’s an [interesting website](https://www.bigocheatsheet.com/).
 * Implement a trie.
 * Learn these important bit manipulation tricks.
 
