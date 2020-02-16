@@ -1,19 +1,19 @@
 # Data Structures
 * Dynamic Array
 * [Linked List](https://www.notion.so/Linked-list-39466fce6cc04908938246ffa33d0ccc)
-* Stack & Queue
+* [Stack](https://www.notion.so/Stack-53d8208ddba74fa58b9288450b407244) & [Queue](https://www.notion.so/Queue-7ed01983f01041e492ef3aaddc421b8a)
 * Hash Tables
-* Binary Search Tree
-* Binary Heaps & Priority Queue
+* [Binary Search Tree](https://www.notion.so/Tree-27f956fdf04d44678807e2bb9fe90404)
+* [Binary Heaps](https://www.notion.so/Tree-27f956fdf04d44678807e2bb9fe90404#d2a7067a623d41ac8b9fd3e0615d65eb) & [Priority Queue](https://www.notion.so/Tree-27f956fdf04d44678807e2bb9fe90404#dd9cfd9f9a584c4c83f2a73a21955f78)
 * Graphs
-* Trie
+* [Trie](https://www.notion.so/Tree-27f956fdf04d44678807e2bb9fe90404#b10a17a28e3347b4856afb37cba0b251)
 
 # Algorithms
 * Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
 * Stability in Sorting
-* Mergesort
-* Quicksort
-* Heapsort — Sort it in-place to get O(1) space
+* [Mergesort](https://www.notion.so/Sorting-5691566d56e94e73a5c72d557f9f5d4c#dc334df3aa3e4a2294b600102c285e7b)
+* [Quicksort](https://www.notion.so/Sorting-5691566d56e94e73a5c72d557f9f5d4c#26bbc7067df94050a88177103ceedfc3)
+* [Heapsort](https://www.notion.so/Sorting-5691566d56e94e73a5c72d557f9f5d4c#ad9f9bce81664d649735d09e7a891e80) — Sort it in-place to get O(1) space
 * Binary Search
 * Selections — Kth Smallest Elements (Sort, QuickSelect, Mediums of Mediums) — Implement all three ways
 * Permutations
