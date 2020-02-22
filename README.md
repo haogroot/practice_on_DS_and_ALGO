@@ -15,7 +15,7 @@
 * [Quicksort](https://www.notion.so/Sorting-5691566d56e94e73a5c72d557f9f5d4c#26bbc7067df94050a88177103ceedfc3)
 * [Heapsort](https://www.notion.so/Sorting-5691566d56e94e73a5c72d557f9f5d4c#ad9f9bce81664d649735d09e7a891e80) — Sort it in-place to get O(1) space
 * [Binary Search](https://www.geeksforgeeks.org/binary-search/)
-* Selections — Kth Smallest Elements (Sort, QuickSelect, Mediums of Mediums) — Implement all three ways
+* [Selections — Kth Smallest Elements](https://www.notion.so/Selections-Kth-Smallest-Elements-b87c9cf2c27947c499408c6c0c3f3e7a) (Sort, QuickSelect, Mediums of Mediums) — Implement all three ways
 * Permutations
 * Subsets
 * BFS Graph
