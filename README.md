@@ -24,7 +24,7 @@
 * Tree Traversals — BFS, DFS (in-order, pre-order, post-order): Implement Recursive and Iterative
 * [External Sort](https://www.notion.so/External-Sort-ec7412dbf7114e5aab876d9a6336dbba) — No implementation; Just know the concept.
 * NP-Complete (Video) — Just know the concept
-* Topological Sort
+* [Topological Sort](https://www.notion.so/Topological-Sort-1fed26e975074792aa211f5779291a69)
 * Detect cycle in an undirected graph
 * Detect a cycle in a directed graph
 * Count connected components in a graph
