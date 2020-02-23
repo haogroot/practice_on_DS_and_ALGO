@@ -23,7 +23,7 @@
 * Dijkstra’s Algorithm (just learn the idea — no need to implement)
 * Tree Traversals — BFS, DFS (in-order, pre-order, post-order): Implement Recursive and Iterative
 * [External Sort](https://www.notion.so/External-Sort-ec7412dbf7114e5aab876d9a6336dbba) — No implementation; Just know the concept.
-* NP-Complete (Video) — Just know the concept
+* [NP-Complete](https://www.notion.so/NP-1a6637c2013144b28be59e166c9a0986) (Video) — Just know the concept
 * [Topological Sort](https://www.notion.so/Topological-Sort-1fed26e975074792aa211f5779291a69)
 * Detect cycle in an undirected graph
 * Detect a cycle in a directed graph
