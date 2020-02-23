@@ -18,8 +18,8 @@
 * [Selections — Kth Smallest Elements](https://www.notion.so/Selections-Kth-Smallest-Elements-b87c9cf2c27947c499408c6c0c3f3e7a) (Sort, QuickSelect, Mediums of Mediums) — Implement all three ways
 * Permutations
 * Subsets
-* BFS Graph
-* DFS Graph
+* [BFS Graph](https://www.notion.so/Graph-9c39c906676f4b51ab073d552143f3e4#6ac473b162b449c8b12173197edb4361)
+* [DFS Graph](https://www.notion.so/Graph-9c39c906676f4b51ab073d552143f3e4#f26e9f120c854ac6b40fb66340220613)
 * Dijkstra’s Algorithm (just learn the idea — no need to implement)
 * Tree Traversals — BFS, DFS (in-order, pre-order, post-order): Implement Recursive and Iterative
 * [External Sort](https://www.notion.so/External-Sort-ec7412dbf7114e5aab876d9a6336dbba) — No implementation; Just know the concept.
