@@ -34,7 +34,12 @@
 Once you are comfortable with the data structures & algorithms above, do the following exercise multiple times (at least 2–3 times) until you can do them with your eyes closed.
 
 * Implement an ArrayList from scratch
-* Reverse a linked list
+* Linked list 
+  * Reverse a linked list
+  * Detect ring in linked list
+  * Merge two sequential linked list
+  * Delete last n index node
+  * Find the middle node of linked list
 * Implement a Stack & a Queue using Array
 * Implement a HashTable with simple Hashing functions
 * Implement a Graph using Adjacency List, and then write functions for BFS & DFS.
