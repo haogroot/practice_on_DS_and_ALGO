@@ -35,8 +35,8 @@ Once you are comfortable with the data structures & algorithms above, do the fol
 
 * Implement an ArrayList from scratch
 * Linked list 
-  * Reverse a linked list
-  * Detect ring in linked list
+  * Reverse a linked list (leetcode #234)
+  * Detect ring in linked list (leetcode #141 and #142)
   * Merge two sequential linked list
   * Delete last n index node
   * Find the middle node of linked list
