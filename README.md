@@ -35,11 +35,11 @@ Once you are comfortable with the data structures & algorithms above, do the fol
 
 * Implement an ArrayList from scratch
 * Linked list 
-  * Reverse a linked list (leetcode #234)
+  * Reverse a linked list (leetcode #206, #234)
   * Detect ring in linked list (leetcode #141 and #142)
-  * Merge two sequential linked list
-  * Delete last n index node
-  * Find the middle node of linked list
+  * Merge two sequential linked list (leetcode #21)
+  * Delete Nth node from the end of linked list (leetcode #19)
+  * Find the middle node of linked list (leetcode #234)
 * Implement a Stack & a Queue using Array
 * Implement a HashTable with simple Hashing functions
 * Implement a Graph using Adjacency List, and then write functions for BFS & DFS.
