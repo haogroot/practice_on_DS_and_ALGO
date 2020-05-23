@@ -40,7 +40,7 @@ Once you are comfortable with the data structures & algorithms above, do the fol
   * Merge two sequential linked list (leetcode #21)
   * Delete Nth node from the end of linked list (leetcode #19)
   * Find the middle node of linked list (leetcode #234)
-* Implement a Stack & a Queue using Array
+* Implement a Stack (leetcode #155) & a Queue using Array
 * Implement a HashTable with simple Hashing functions
 * Implement a Graph using Adjacency List, and then write functions for BFS & DFS.
 * Write the binary search algorithm both recursively and iteratively
