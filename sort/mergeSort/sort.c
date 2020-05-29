@@ -60,7 +60,6 @@ void sort (int *array, int size)
     printf ("\nAfter merge sort:\n");
     for(int i=0; i<TEST_SIZE; i++)
     {
-        array[i] = (rand()%100) + 1;
         printf("%d ", array[i]);
     }
 }
