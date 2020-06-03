@@ -2,7 +2,7 @@
 * Dynamic Array
 * [Linked List](https://www.notion.so/Linked-list-39466fce6cc04908938246ffa33d0ccc)
 * [Stack](https://www.notion.so/Stack-53d8208ddba74fa58b9288450b407244) & [Queue](https://www.notion.so/Queue-7ed01983f01041e492ef3aaddc421b8a)
-* Hash Tables
+* [Hash Tables](https://www.notion.so/Hash-Table-33df36ad7d5540b3a77bd2a2341a9774)
 * [Binary Search Tree](https://www.notion.so/Tree-27f956fdf04d44678807e2bb9fe90404)
 * [Binary Heaps](https://www.notion.so/Tree-27f956fdf04d44678807e2bb9fe90404#d2a7067a623d41ac8b9fd3e0615d65eb) & [Priority Queue](https://www.notion.so/Tree-27f956fdf04d44678807e2bb9fe90404#dd9cfd9f9a584c4c83f2a73a21955f78)
 * Graphs
