@@ -1,22 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-struct Node
-{
-    int data;
-    struct Node *next;
-};
-
-struct AdjList
-{
-    struct Node *head;
-};
-
-struct Graph
-{
-    int V;
-    struct AdjList *array;
-};
+#include "graph.h"
+#include "queue.h"
 
 struct Graph* createGraph(int vertexNum)
 {
@@ -31,7 +14,7 @@ struct Graph* createGraph(int vertexNum)
     return graph;
 }
 
-void addEdge(struct Graph *graph, int src, int dst)
+void addEdge (struct Graph *graph, int src, int dst)
 {
     struct Node *newNode = (struct Node*) malloc(sizeof(struct Node));
     newNode->data = dst;
@@ -39,8 +22,9 @@ void addEdge(struct Graph *graph, int src, int dst)
     graph->array[src].head = newNode;
 }
 
-void printGraph(struct Graph *graph)
+void printGraph (struct Graph *graph)
 {
+    printf("Print the Graph: \n");
     struct Node *tmp = NULL;
     for(int i=0; i<graph->V; i++)
     {
@@ -55,20 +39,67 @@ void printGraph(struct Graph *graph)
     }
 }
 
-int main()
+void printPath (int *prev, int s, int d)
 {
-    struct Graph *g1 = createGraph(7);
-    addEdge(g1, 0, 1);
-    addEdge(g1, 0, 3);
-    addEdge(g1, 1, 2);
-    addEdge(g1, 2, 5);
-    addEdge(g1, 3, 1);
-    addEdge(g1, 3, 4);
-    addEdge(g1, 3, 6);
-    addEdge(g1, 4, 6);
-    addEdge(g1, 5, 6);
-
-    printGraph(g1);
-
-    return 0;
+    if(prev[d] != -1 && s != d)
+    {
+        printPath (prev, s, prev[d]);
+    }
+    printf("%d ", d);
 }
+
+void bfsTraversal(struct Graph *graph, int src, int dst)
+{
+    //Init queue
+    Queue waitqueue;
+    waitqueue.head = 0;
+    waitqueue.tail = 0;
+    
+    int *visited = (int *)malloc ((graph->V) * sizeof(int));
+    for(int i=0; i<graph->V; i++)
+    {
+        visited[i] = 0;
+    }
+    int *prev = (int *)malloc ((graph->V) * sizeof(int));
+    for(int i=0; i<graph->V; i++)
+    {
+        prev[i] = -1;
+    }
+
+    struct Node *tmp = graph->array[src].head;
+    int previousNode = src;
+    enqueue(&waitqueue, src);
+
+    while (queueSize(&waitqueue) > 0)
+    {
+        previousNode = waitqueue.val[waitqueue.head]; 
+        tmp = graph->array[previousNode].head;
+        while(tmp != NULL)
+        {
+            if (visited[tmp->data] == 0)
+            {
+                enqueue(&waitqueue, tmp->data);
+                visited[tmp->data] = 1;
+                prev[tmp->data] = previousNode;
+            }
+            tmp = tmp->next;
+        }
+        dequeue(&waitqueue);
+    }
+
+    printf("BFS traversal result: \n");
+    for(int i=0; i<graph->V; i++)
+    {
+        printf("%d ", prev[i]);
+    }
+    printf ("\n");
+
+    printf("Path: \n");
+    printPath (prev, src, dst);
+
+    free(visited);
+    free(prev);
+}
+
+
+void dfsTraversal(struct Graph *graph, int src, int dst);

@@ -3,9 +3,17 @@ CFLAGS = -g -Wall -Werror -I.
 
 TARGET = graph
 
-$(TARGET): $(TARGET).c
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+OBJECTS = queue.o graph.o main.o
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(TARGET)  $(OBJECTS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
 
 clean:
 	@echo clean...
 	rm $(TARGET) 
+	rm $(OBJECTS)
