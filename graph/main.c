@@ -16,5 +16,7 @@ int main()
     printGraph(g1);
     bfsTraversal(g1, 0, 6);
 
+    dfsTraversal(g1, 0, 6);
+
     return 0;
 }

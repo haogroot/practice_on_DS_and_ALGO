@@ -87,19 +87,70 @@ void bfsTraversal(struct Graph *graph, int src, int dst)
         dequeue(&waitqueue);
     }
 
-    printf("BFS traversal result: \n");
+    printf("After BFS traversal, prev[] result: \n");
     for(int i=0; i<graph->V; i++)
     {
         printf("%d ", prev[i]);
     }
     printf ("\n");
 
-    printf("Path: \n");
+    /* Change dst to check different src-dst path */
+    printf("Path from %d to %d: \n", src, dst);
     printPath (prev, src, dst);
+    printf("\n");
 
     free(visited);
     free(prev);
 }
 
+void recurDFS(struct Graph* graph, int src, int dst, int *visited, int *prev)
+{
+    if (src == dst)
+        return;
+    struct Node *tmp = graph->array[src].head;
+    while (tmp != NULL)
+    {
+        if (visited[tmp->data] == 0)
+        {
+            visited[tmp->data] = 1;   
+            prev[tmp->data] = src;
+            printf("%d ", tmp->data);
+            recurDFS (graph, tmp->data, dst, visited, prev);
+        }
+        tmp = tmp->next;
+    }
+}
 
-void dfsTraversal(struct Graph *graph, int src, int dst);
+void dfsTraversal(struct Graph *graph, int src, int dst)
+{
+    int *visited = (int *) malloc(graph->V * sizeof(int));
+    for(int i=0; i<graph->V; i++)
+    {
+        visited[i] = 0;
+    }
+    int *prev = (int *) malloc(graph->V * sizeof(int));
+    for(int i=0; i<graph->V; i++)
+    {
+        prev[i] = -1;
+    }
+    printf("The order to traverse graph dfs...\n");
+
+    recurDFS(graph, src, dst, visited, prev);
+    printf("\n");
+
+    printf("After DFS traversal, prev[] result: \n");
+    for(int i=0; i<graph->V; i++)
+    {
+        printf("%d ", prev[i]);
+    }
+    printf ("\n");
+
+    /* Change dst to check different src-dst path */
+    printf("Path from %d to %d:\n", src, dst);
+    printPath (prev, src, dst);
+    printf("\n");
+
+    free(visited);
+    free(prev);
+}
+
