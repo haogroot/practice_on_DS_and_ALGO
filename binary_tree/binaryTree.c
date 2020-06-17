@@ -53,6 +53,59 @@ void postOrder (struct treeNode *tree)
     }
 }
 
+/**
+ * calculate the height of binary tree.
+ * \return the height of tree.
+ */
+int height (struct treeNode *root)
+{
+    if (root==NULL)
+        return 0;
+    else
+    {
+        int lheight = height(root->left);
+        int rheight = height(root->right);
+
+        if (lheight > rheight)
+            return lheight+1;
+        else
+            return rheight+1;
+    }
+}
+
+/**
+ * Print the data of binary tree at specific level.
+ * \param   root    binary tree
+ * \param   level   which level of tree to print
+ */
+void printGivenLevel(struct treeNode *root, int level)
+{
+    if (root == NULL)
+        return;
+    if (level == 0)
+        printf ("%d ", root->data);
+    else
+    {
+        printGivenLevel(root->left, level-1);
+        printGivenLevel(root->right, level-1);
+    }
+}
+
+/**
+ * BFS the binary tree and print the data.
+ * \param   root    pointer to the root of binary tree
+ */
+void bfsTraversal(struct treeNode *root)
+{
+    int treeHeight = height (root);
+    printf ("Tree's height = %d\n", treeHeight);
+    printf ("BFS traversal:\n");
+    for(int i=0; i<treeHeight; i++)
+    {
+        printGivenLevel (root, i);
+    }
+}
+
 int main()
 {
     struct treeNode *root = NULL;
@@ -63,6 +116,7 @@ int main()
     root = insert(root, 30);
     root = insert(root, 90);
     root = insert(root, 70);
+
     printf("InOrder traversal:\n");
     inOrder (root); 
     printf("\n");
@@ -74,5 +128,8 @@ int main()
     printf("PostOrder traversal:\n");
     postOrder (root); 
     printf("\n");
+
+    bfsTraversal (root);
+
     return 0;
 }
