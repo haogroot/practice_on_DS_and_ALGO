@@ -7,9 +7,15 @@ struct list
     struct list *next;
 };
 
+/** 
+ * This global variable is for storing new list head 
+ * when reverse linked list recursivly.
+ */
+struct list *newHead = NULL;
+
 int list_add(struct list *head, int data)
 {
-    struct list *new = malloc(sizeof(struct list));
+    struct list *new = (struct list*) malloc(sizeof(struct list));
     new->data = data;
     while(head->next != NULL)
         head = head->next;
@@ -29,7 +35,7 @@ void print(struct list *head)
     printf("\n");
 }
 
-void reverse(struct list *head)
+void reverseIterative(struct list *head)
 {
     struct list *tmp, *current, *prev = NULL;
     current = head->next;
@@ -42,6 +48,26 @@ void reverse(struct list *head)
     }
     head->next = tmp;
 }
+
+struct list *recurHelper (struct list *node)
+{
+    if (node->next == NULL)
+    {
+        newHead = node;
+        return node;
+    }
+    struct list *tmp = recurHelper (node->next);
+    tmp->next = node;
+    node->next = NULL;
+    return node;
+}
+
+void reverseRecursive (struct list *head)
+{
+    recurHelper (head->next);
+    head->next = newHead;
+
+}
         
 int main()
 {
@@ -49,12 +75,16 @@ int main()
     guard_head.next = NULL;
     /* Use this value to denoted this node as head */
     guard_head.data = 5566;
-    for(int i=0; i<5; i++)
+    for(int i=0; i<10; i++)
     {
         list_add(&guard_head, i);
     }
     print(&guard_head);
-    reverse(&guard_head);
+
+    reverseIterative(&guard_head);
+    print(&guard_head);
+
+    reverseRecursive(&guard_head);
     print(&guard_head);
 
     return 0;
