@@ -24,7 +24,7 @@ int partition (int *arr, int left, int right)
         }
     }
     swap (&arr[i], &arr[right]);
-    return i; 
+    return i;
 }
 
 void quickSort (int *arr, int left, int right)
