@@ -1,4 +1,4 @@
 
-![image](https://i.imgur.com/fqxmknq.jpg)
+![image](/img/bt.jpg)
 
 Sample code was implemented based on the above picture.
